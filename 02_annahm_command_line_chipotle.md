@@ -20,34 +20,35 @@
 5. Do chicken burritos more often have black beans or pinto beans?
     * Black beans. There are 282 lines which show black beans, 105 with pinto, and 20 lines with both.
 6. Make a list of all of the CSV or TSV files in the DAT8 repo (using a single command). Think about how wildcard characters can help you with this task.
-    $ ls -l *.csv *.tsv
--rwxrwxr-x. 1 anna anna    2266 Dec  2 20:30 airlines.csv
--rwxrwxr-x. 1 anna anna  579778 Dec  2 20:30 bank-additional.csv
--rwxrwxr-x. 1 anna anna  648353 Dec  2 20:30 bikeshare.csv
--rwxrwxr-x. 1 anna anna  364975 Dec  2 20:30 chipotle.tsv
--rwxrwxr-x. 1 anna anna    4973 Dec  2 20:30 drinks.csv
--rwxrwxr-x. 1 anna anna   22555 Dec  2 20:30 hitters.csv
--rwxrwxr-x. 1 anna anna   91499 Dec  2 20:30 imdb_1000.csv
--rwxrwxr-x. 1 anna anna  477907 Dec  2 20:30 sms.tsv
--rwxrwxr-x. 1 anna anna   60302 Dec  2 20:30 titanic.csv
--rwxrwxr-x. 1 anna anna 3004097 Dec  2 20:30 ufo.csv
--rwxrwxr-x. 1 anna anna      99 Dec  2 20:30 vehicles_test.csv
--rwxrwxr-x. 1 anna anna     354 Dec  2 20:30 vehicles_train.csv
--rwxrwxr-x. 1 anna anna 8091185 Dec  2 20:30 yelp.csv
+    * $ ls -l *.csv *.tsv
+    * -rwxrwxr-x. 1 anna anna    2266 Dec  2 20:30 airlines.csv
+    * -rwxrwxr-x. 1 anna anna  579778 Dec  2 20:30 bank-additional.csv
+    * -rwxrwxr-x. 1 anna anna  648353 Dec  2 20:30 bikeshare.csv
+    * -rwxrwxr-x. 1 anna anna  364975 Dec  2 20:30 chipotle.tsv
+    * -rwxrwxr-x. 1 anna anna    4973 Dec  2 20:30 drinks.csv
+    * -rwxrwxr-x. 1 anna anna   22555 Dec  2 20:30 hitters.csv
+    * -rwxrwxr-x. 1 anna anna   91499 Dec  2 20:30 imdb_1000.csv
+    * -rwxrwxr-x. 1 anna anna  477907 Dec  2 20:30 sms.tsv
+    * -rwxrwxr-x. 1 anna anna   60302 Dec  2 20:30 titanic.csv
+    * -rwxrwxr-x. 1 anna anna 3004097 Dec  2 20:30 ufo.csv
+    * -rwxrwxr-x. 1 anna anna      99 Dec  2 20:30 vehicles_test.csv
+    * -rwxrwxr-x. 1 anna anna     354 Dec  2 20:30 vehicles_train.csv
+    * -rwxrwxr-x. 1 anna anna 8091185 Dec  2 20:30 yelp.csv
 
 7. Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files in the DAT8 repo.
-    $ find . | xargs grep 'ictionary' > dict.out
-    $ grep ictionary dict.out > dict.out2
-    $ wc -l dict.out2
-123 dict.out2
+    * $ find . | xargs grep 'ictionary' > dict.out
+    * $ grep ictionary dict.out > dict.out2
+    * $ wc -l dict.out2
+    * 123 dict.out2
 
 8. **Optional:** Use the the command line to discover something "interesting" about the Chipotle data. Try using the commands from the "advanced" section!
-    $ cut -f3 chipotle.tsv > out
-    $ sort out > out.sort
-    $ uniq out.sort > out.sort.uniq
-    $ wc -l out.sort.uniq
-50 out.sort.uniq
-    Note: out of 1834 orders or a total of 4623 individual servings of food items, Chipotle only has 50 unique menu items including drinks.  This is an example of a good restaurant that focuses on a smaller number of menu items and does it well.  
+
+    * $ cut -f3 chipotle.tsv > out
+    * $ sort out > out.sort
+    * $ uniq out.sort > out.sort.uniq
+    * $ wc -l out.sort.uniq
+    * 50 out.sort.uniq
+    * Note: out of 1834 orders or a total of 4623 individual servings of food items, Chipotle only has 50 unique menu items including drinks.  This is an example of a good restaurant that focuses on a smaller number of menu items and does it well.  
 
 <!---
 -->
