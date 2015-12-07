@@ -12,12 +12,25 @@
     * order_id: Represents the orders that were made at Chipotle. Within each order are multiple food items from the Chipotle menu. 
     * quantity: Quantity of a food item for a given order.
 2. How many orders do there appear to be?
+    * cut -f1 chipotle.tsv | tail -5
+    * 1833
+    * 1833
+    * 1834
+    * 1834
+    * 1834
     * there are 1834 orders in this file.
 3. How many lines are in this file?
+    * wc -l chipotle.tsv 
     * 4623 lines in file
 4. Which burrito is more popular, steak or chicken?
     * Chicken Burrito is more popular ("grep "Chicken Burrito" chipotle.tsv | wc -l" yields 553 lines and doing the same for Steak Burrito yields 368).
 5. Do chicken burritos more often have black beans or pinto beans?
+    * grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
+    *  282
+    * grep "Chicken Burrito" chipotle.tsv | grep "Pinto Beans" | wc -l
+    *  105
+    * grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | grep "Pinto Beans" | wc -l
+    *  20
     * Black beans. There are 282 lines which show black beans, 105 with pinto, and 20 lines with both.
 6. Make a list of all of the CSV or TSV files in the DAT8 repo (using a single command). Think about how wildcard characters can help you with this task.
     * $ ls -l *.csv *.tsv
