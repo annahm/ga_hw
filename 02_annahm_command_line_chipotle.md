@@ -11,8 +11,11 @@
 1. Look at the head and the tail of **chipotle.tsv** in the **data** subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you are unsure, look at more of the file contents.)
     * order_id: Represents the orders that were made at Chipotle. Within each order are multiple food items from the Chipotle menu. 
     * quantity: Quantity of a food item for a given order.
+    * item_name: individual item on Chipotle menu for a given order.
+    * choice_description:  List of ingredients for the item_name.  Sub-ingredients (like for salsa) are grouped together in a list by "[]" brackets.
+    * item_price: price is dependent on the following factors, specifically item_name, quantity, choice_description.  choice_description lists the ingredients which dictates the price for that menu item.  
 2. How many orders do there appear to be?
-    * cut -f1 chipotle.tsv | tail -5
+    * $ cut -f1 chipotle.tsv | tail -5
     * 1833
     * 1833
     * 1834
@@ -20,16 +23,16 @@
     * 1834
     * there are 1834 orders in this file.
 3. How many lines are in this file?
-    * wc -l chipotle.tsv 
+    * $ wc -l chipotle.tsv 
     * 4623 lines in file
 4. Which burrito is more popular, steak or chicken?
     * Chicken Burrito is more popular ("grep "Chicken Burrito" chipotle.tsv | wc -l" yields 553 lines and doing the same for Steak Burrito yields 368).
 5. Do chicken burritos more often have black beans or pinto beans?
-    * grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
+    * $ grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
     *  282
-    * grep "Chicken Burrito" chipotle.tsv | grep "Pinto Beans" | wc -l
+    * $ grep "Chicken Burrito" chipotle.tsv | grep "Pinto Beans" | wc -l
     *  105
-    * grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | grep "Pinto Beans" | wc -l
+    * $ grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | grep "Pinto Beans" | wc -l
     *  20
     * Black beans. There are 282 lines which show black beans, 105 with pinto, and 20 lines with both.
 6. Make a list of all of the CSV or TSV files in the DAT8 repo (using a single command). Think about how wildcard characters can help you with this task.
